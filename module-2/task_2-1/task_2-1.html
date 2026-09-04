@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" style="display: table; margin: auto;">
+<head>
+  <meta charset="UTF-8">
+  <title>Submission 2.1</title>
+</head>
+<body>
+<script>
+  /* write your code below this line  🙂 */
+
+  /* Discussion questuions.
+  1. Yes, for variables, but not for constants. We can create a variable using let without assigning a value 
+  to it. IT`s value will then be undefined. However, we cannot create a constant using const without
+  assigning a value to it. A const must be given a value when it is declared.
+
+  2. Yes you can create multiple variables or multiple constants on the same line. They do not
+  have to be written on seperate lines. We differentiate them by using the keywords let and const.
+  But you cannot mix let and const innside a single statement.
+
+  3. No I don`t think we can assign a new value to an already declared const later in the code. If we
+  need the value to change later, we should use let instead of const. We should use const by default.
+  If we later discover that the value needs to change, we can change the declaration from const to let.
+ 
+  4. Without "use strict", it may be posible to create variables without using let or const, but 
+  it`s not smart. With "use strict", it causes an error. Variables should be declared using const or let.
+  
+  5. Undefined usually means that a variable exists, but no value has been assign to it yet.
+  Null is a value that we intentionally assign to represent "no value" or "empty". */
+
+name = "Tiina";
+"use strict";
+name = "Tiina";
+
+let name;
+
+let favoriteColor = null;
+
+
+const userName = "Tiina";
+let userAge = 30;
+let goodmood = true;
+
+const text = "I Love Programming!";
+const a = 5;
+const b = a;
+let c = 1.345;
+
+const ball = Math.PI;
+valuePI = 3.14;
+
+"use strict";
+valuePI = 3.14;
+
+"use strict";
+const valuePI = 3.14;
+
+
+ b = 7;
+
+
+</script>
+</body>
+</html>
