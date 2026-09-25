@@ -10,8 +10,52 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[1. In part 1, is it possible to solve the problem using a single "for" loop?]</li>
+      <p>[Yes, Part 1 can be solved with a single for loop. The loop can count from 1 to 10. In each iteration,
+        we can use the current number for the ascending line and calculate 11 - number for the descending line.
+        I used two loops in my code because it made the two directions easier for me to understand.]</p>
+
+      <li>[n part 2, can we create what is known as an "infinite" loop within the condition of the "while" loop?
+Describe what would or would not be necessary to achieve this. Provide a thorough explanation of
+your answer.]</li>
+      <p>[Yes, the while loop in Part 2 can become infinite if its condition never becomes false. In my program,
+        the condition is guessesNumber !== secretNumber. The loop stops when the random guess matches the secret number.
+        To make the loop infinite, we could choose a secret number outside the range of possible guesses, such as 100.
+        The program only generates numbers from 1 to 60, so it could never guess 100. The condition would stay true forever
+        The same problem would occur if guessedNumber was never updated inside the loop. With a secret number between
+        1 and 60 and a new random guess each time, the loop should eventually stop, although we cannot know exactly
+        how many guesses it will take.]</p>
+
+      <li>[Discuss briefly how quickly or slowly a computer might be able to compute this, considering the
+number of guesses and the time it takes. How does the program behave while it is guessing? Can
+the program perform other tasks concurrently?]</li>
+      <p>[A computer can make many guesses very quickly, but the time varies because the guesses are random. In Part 3,
+        there are one million possible numbers, so it may take a large number of guesses before the program finds the right one.
+        The number of guesses and the time will usually change each time we run it.
+        While the while loop is running, the JavaScript code on that page is busy making guesses. Because this is normal,
+        synchronous loop, the page cannot respond to other JavaScript tasks until the loop finishes. If the loop runs for
+        too long, the browser may show a warning that the page is slowing down. To let the page do other work while guessing,
+        we could need a different approach, such as dividing the work into smaller parts.]</p>
+
+      <li>[Explain the relationship between rows and columns in nested "for" loops. Can we, for instance,
+change the order, considering rows to be innermost or columns to be innermost, or does this not
+matter?]</li>
+      <p>[In part 5, the outer for loop chooses the row, and the inner for loop goes through all nine columns in that row.
+        When the inner loop finnishes, the program prints the completed row and moves to the next one.
+        We could switch to loops so that columns are on the outside and rows are on the inside. However, that would change
+        the order in which the cells are created. If we still want the same output with seven lines of nine columns, we
+        would also have to change how we collect and print the text. Therefore, the order of the loops matters for this 
+        solution.]</p>
+
+      <li>[My key takeaways and insights that I gained:]</li>
+      <p>[Working on this assignment helped me understand that a loop needs both a clear condition and a way to reach that
+        condition. I found for-loops easier to follow when I knew how many times something should repeat, such as counting rows
+        and columns. I uded while-loops when the number of attempts was unknown, such as guessing a number or rolling dice.
+        I also learned why it matters where I place code innside a loop. In Part 5, each row had to be completed before it was
+        printed. In part 7, a small spelling mistake meant that the condition for three pairs could never come true, and the
+        page stopped responding. Fixing that mistake helped me understand how an infinite loop can happen in practice.
+        I still find loops challenging, but seeing the output in the browser made it easier to connect the code to what 
+        it does.]</p>
     </ol>
     <script type="module" src="./task_3-2.mjs" defer></script>
   </body>
